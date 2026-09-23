@@ -1,0 +1,77 @@
+/* KIRO GAMES STORE — PlayStation Exploit Host Theme */
+:root{
+  --bg:#020814;
+  --panel:rgba(3,16,36,.82);
+  --panel2:rgba(5,28,58,.72);
+  --line:#087cff;
+  --line2:#00b7ff;
+  --text:#f5f9ff;
+  --muted:#9eb7d7;
+  --accent:#00eaff;
+  --green:#00f0a0;
+  --shadow:0 0 28px rgba(0,132,255,.28), inset 0 0 30px rgba(0,120,255,.06);
+}
+*{box-sizing:border-box}
+html{
+  min-height:100%;
+  background:#010611 url('img.jpg') center/cover fixed no-repeat;
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  text-align:center;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+html:before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(circle at 50% 0%,rgba(0,110,255,.26),transparent 38%),linear-gradient(180deg,rgba(0,5,15,.45),rgba(0,5,15,.92));
+}
+body{min-height:100vh;margin:0;padding:24px 18px 34px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:white}
+h1{color:var(--text);font-size:24px;line-height:1.35;margin:10px 0;text-shadow:0 2px 10px #000}
+hr{border:0;height:1px;max-width:1100px;background:linear-gradient(90deg,transparent,#078cff,transparent);box-shadow:0 0 12px #007cff;margin:16px auto 24px}
+body:before{
+  content:"KIRO GAMES STORE";display:block;max-width:1100px;margin:0 auto 14px;
+  padding:18px 20px;border:1px solid rgba(0,160,255,.65);border-radius:18px;
+  background:linear-gradient(135deg,rgba(0,39,88,.88),rgba(2,11,27,.88));
+  box-shadow:var(--shadow);color:#fff;font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:2px;
+}
+#msgs{max-width:1100px;margin:0 auto 4px;font-size:clamp(18px,3vw,30px);color:#dff7ff}
+#menu,#crypto,#progress,#tools,#lnx,#mods{max-width:1100px;margin:0 auto}
+#menu{padding:26px 20px 30px;border:1px solid rgba(0,145,255,.72);border-radius:22px;background:linear-gradient(145deg,rgba(2,19,42,.9),rgba(1,8,21,.86));box-shadow:0 0 40px rgba(0,94,255,.24),inset 0 0 40px rgba(0,120,255,.05)}
+#menu>h1:first-child{font-size:26px!important;color:#00f0a0!important;margin:0 0 18px!important}
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  width:250px;min-height:54px;margin:7px 5px;padding:10px 16px;
+  border:1px solid #008dff;border-radius:13px;
+  background:linear-gradient(180deg,#086be1,#06358e);
+  color:#fff;font-size:18px;font-weight:700;letter-spacing:.2px;
+  box-shadow:0 0 16px rgba(0,119,255,.24),inset 0 1px rgba(255,255,255,.16);
+  cursor:pointer;transition:.2s ease;overflow:hidden;
+}
+.btn:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.16),transparent 70%);transform:translateX(-100%);transition:.45s}
+.btn:hover{transform:translateY(-2px) scale(1.015);background:linear-gradient(180deg,#1289ff,#0751c6);box-shadow:0 0 24px rgba(0,170,255,.5),inset 0 1px rgba(255,255,255,.2)}
+.btn:hover:before{transform:translateX(100%)}
+.btn:active{transform:translateY(0) scale(.99)}
+.btn-onln{background:linear-gradient(180deg,#00a66d,#00613f);border-color:#00e6a0}
+.btn-onln:hover{background:linear-gradient(180deg,#00c783,#007c55)}
+.btn-toolbox{background:linear-gradient(180deg,#a93411,#681707);border-color:#ff6b31}
+.btn-toolbox:hover{background:linear-gradient(180deg,#d94a18,#8c2209)}
+.btn-multi{background:linear-gradient(180deg,#087cff,#1240c4);border-color:#00cfff;box-shadow:0 0 22px rgba(0,210,255,.35)}
+.btn-multi:hover{background:linear-gradient(180deg,#16a0ff,#2452e8)}
+#crypto{display:none;padding:30px 20px;border:1px solid rgba(0,145,255,.72);border-radius:22px;background:rgba(2,14,31,.9);box-shadow:var(--shadow)}
+#crypto img{width:150px!important;height:150px!important;max-width:80vw;object-fit:cover;border-radius:14px;border:2px solid #078cff;box-shadow:0 0 18px rgba(0,130,255,.45)}
+#crypto h1{word-break:break-word;font-size:17px!important;color:#dceeff}
+#crypto h1[style*="yellow"]{color:#ffe600!important}
+#progress{padding:70px 20px;border:1px solid rgba(0,145,255,.45);border-radius:22px;background:rgba(2,14,31,.76);box-shadow:var(--shadow)}
+#progress h1{color:#00eaff}
+/* Inner exploit pages */
+body>h1:not(#msgs){max-width:1100px;margin:0 auto 10px}
+@media(max-width:700px){
+ body{padding:12px 10px 24px}
+ body:before{padding:14px 10px;font-size:29px}
+ #menu{padding:20px 10px}
+ .btn{width:min(100%,360px);margin:6px 0;font-size:17px}
+ h1{font-size:20px}
+}
+@media(min-width:701px){#menu br{content:"";display:block;height:4px}}
